@@ -1,0 +1,216 @@
+version: 2
+
+models:
+  - name: dim_aircrafts
+    columns:
+      - name: sk_aircraft_id
+        description: "Surrogate Key for aircraft_id"
+        tests:
+          - not_null
+          - dbt_constraints.primary_key
+
+      - name: nk_aircraft_id
+        description: "Natural Key for aircraft_id"
+        tests:
+          - not_null
+
+  - name: dim_airports
+    columns:
+      - name: sk_airport_id
+        description: "Surrogate Key for airport_id"
+        tests:
+          - not_null
+          - dbt_constraints.primary_key
+
+      - name: nk_airport_id
+        description: "Natural Key for airport_id"
+        tests:
+          - not_null
+
+  - name: dim_airlines
+    columns:
+      - name: sk_airline_id
+        description: "Surrogate Key for aircraft_id"
+        tests:
+          - not_null
+          - dbt_constraints.primary_key
+
+      - name: nk_airline_id
+        description: "Natural Key for airline_id"
+        tests:
+          - not_null
+
+  - name: dim_date
+    columns:
+      - name: date_id
+        description: "Primary Key for dim_dates"
+        tests:
+          - not_null
+          - dbt_constraints.primary_key
+
+  - name: dim_hotels
+    columns:
+      - name: sk_hotel_id
+        tests:
+          - not_null
+          - dbt_constraints.primary_key
+
+      - name: nk_hotel_id
+        tests:
+          - not_null
+
+  - name: fct_trip
+    columns:
+      - name: sk_trip_id
+        description: "Surrogate Key for booking_ticket_id"
+        tests:
+          - not_null
+          - dbt_constraints.primary_key
+
+      - name: nk_trip_id
+        tests:
+          - not_null
+
+      - name: customer_id
+        tests:
+          - not_null
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_customers')
+              pk_column_name: sk_airport_id
+
+      - name: departure_origin_airport_id
+        description: "Foreign Key from departure origin airport_id"
+        tests:
+          - not_null
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_airports')
+              pk_column_name: sk_airport_id
+
+      - name: departure_destination_airport_id
+        description: "Foreign Key from departure destination airport_id"
+        tests:
+          - not_null
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_airports')
+              pk_column_name: sk_airport_id
+
+      - name: return_origin_airport_id
+        description: "Foreign Key from destination airport_id"
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_airports')
+              pk_column_name: sk_airport_id
+
+      - name: return_destination_airport_id
+        description: "Foreign Key from destination airport_id"
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_airports')
+              pk_column_name: sk_airport_id
+
+      - name: departure_aircraft_id
+        tests:
+          - not_null
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_aircrafts')
+              pk_column_name: sk_aircraft_id
+
+      - name: return_aircraft_id
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_aircrafts')
+              pk_column_name: sk_aircraft_id
+
+      - name: departure_airline_id
+        tests:
+          - not_null
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_airlines')
+              pk_column_name: sk_airline_id
+
+      - name: return_airline_id
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_airlines')
+              pk_column_name: sk_airline_id
+
+      - name: hotel_id
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_hotels')
+              pk_column_name: sk_hotel_id
+      
+      - name: departure_date
+        tests:
+          - not_null
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_dates')
+              pk_column_name: date_actual
+
+      - name: return_date
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_dates')
+              pk_column_name: date_actual
+
+      - name: check_in_date
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_dates')
+              pk_column_name: date_actual
+
+      - name: check_out_date
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_dates')
+              pk_column_name: date_actual
+
+  - name: fct_daily_flight
+    columns:
+      - name: date_id
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_dates')
+              pk_column_name: date_actual
+
+      - name: origin_airport_id
+        tests:
+          - not_null
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_airports')
+              pk_column_name: sk_airport_id
+
+      - name: destination_airport_id
+        tests:
+          - not_null
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_airports')
+              pk_column_name: sk_airport_id
+
+      - name: airline_id
+        tests:
+          - not_null
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_airlines')
+              pk_column_name: sk_airline_id
+
+      - name: aircraft_id
+        tests:
+          - not_null
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_aircrafts')
+              pk_column_name: sk_aircraft_id
+
+  - name: fct_daily_hotel
+    columns:
+      - name: date_id
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_dates')
+              pk_column_name: date_actual
+
+      - name: hotel_id
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('dim_hotels')
+              pk_column_name: sk_hotel_id

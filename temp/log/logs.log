@@ -1,0 +1,265 @@
+2025-07-06 08:32:27,529 - INFO - Extract All Tables From Sources - FAILED
+2025-07-06 08:32:27,556 - ERROR - [pid 16148] Worker Worker(salt=8403578248, workers=1, host=LAPTOP-HILMAN, username=Hilman Alfajri, pid=16148) failed    Extract()
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 17, in read_sql_file
+    with open(file_path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'c:\\Users\\Hilman Alfajri\\Documents\\Pacmann\\Data Storage\\Exercise 3\\pactravel-extract_load_fresh-start\\src_query\\extract/all-tables.sql'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 82, in run
+    extract_query = read_sql_file(
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 22, in read_sql_file
+    raise Exception(f"Error reading SQL file: {e}")
+Exception: Error reading SQL file: [Errno 2] No such file or directory: 'c:\\Users\\Hilman Alfajri\\Documents\\Pacmann\\Data Storage\\Exercise 3\\pactravel-extract_load_fresh-start\\src_query\\extract/all-tables.sql'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\luigi\worker.py", line 210, in run
+    new_deps = self._run_get_new_deps()
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\luigi\worker.py", line 138, in _run_get_new_deps
+    task_gen = self.task.run()
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 140, in run
+    raise Exception(f"FAILED to execute EXTRACT TASK !!!")
+Exception: FAILED to execute EXTRACT TASK !!!
+2025-07-06 08:32:27,602 - DEBUG - 1 running tasks, waiting for next task to finish
+2025-07-06 08:32:27,606 - INFO - Informed scheduler that task   Extract__99914b932b   has status   FAILED
+2025-07-06 08:32:27,607 - DEBUG - Asking scheduler for work...
+2025-07-06 08:32:27,607 - DEBUG - Done
+2025-07-06 08:32:27,607 - DEBUG - There are no more tasks to run at this time
+2025-07-06 08:32:27,608 - DEBUG - There are 1 pending tasks possibly being run by other workers
+2025-07-06 08:32:27,608 - DEBUG - There are 1 pending tasks unique to this worker
+2025-07-06 08:32:27,608 - DEBUG - There are 1 pending tasks last scheduled by this worker
+2025-07-06 08:32:27,609 - INFO - Worker Worker(salt=8403578248, workers=1, host=LAPTOP-HILMAN, username=Hilman Alfajri, pid=16148) was stopped. Shutting down Keep-Alive thread
+2025-07-06 08:32:27,611 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 1 tasks of which:
+* 1 failed:
+    - 1 Extract()
+
+This progress looks :( because there were failed tasks
+
+===== Luigi Execution Summary =====
+
+2025-07-06 08:37:01,582 - INFO - Extract All Tables From Sources - FAILED
+2025-07-06 08:37:01,588 - ERROR - [pid 9920] Worker Worker(salt=4687641658, workers=1, host=LAPTOP-HILMAN, username=Hilman Alfajri, pid=9920) failed    Extract()
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 17, in read_sql_file
+    with open(file_path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'c:\\Users\\Hilman Alfajri\\Documents\\Pacmann\\Data Storage\\Exercise 3\\pactravel-extract_load_fresh-start\\src_query\\extract\\all-tables.sql'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 82, in run
+    extract_query = read_sql_file(
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 22, in read_sql_file
+    raise Exception(f"Error reading SQL file: {e}")
+Exception: Error reading SQL file: [Errno 2] No such file or directory: 'c:\\Users\\Hilman Alfajri\\Documents\\Pacmann\\Data Storage\\Exercise 3\\pactravel-extract_load_fresh-start\\src_query\\extract\\all-tables.sql'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\luigi\worker.py", line 210, in run
+    new_deps = self._run_get_new_deps()
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\luigi\worker.py", line 138, in _run_get_new_deps
+    task_gen = self.task.run()
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 140, in run
+    raise Exception(f"FAILED to execute EXTRACT TASK !!!")
+Exception: FAILED to execute EXTRACT TASK !!!
+2025-07-06 08:37:01,592 - DEBUG - 1 running tasks, waiting for next task to finish
+2025-07-06 08:37:01,597 - INFO - Informed scheduler that task   Extract__99914b932b   has status   FAILED
+2025-07-06 08:37:01,597 - DEBUG - Asking scheduler for work...
+2025-07-06 08:37:01,598 - DEBUG - Done
+2025-07-06 08:37:01,598 - DEBUG - There are no more tasks to run at this time
+2025-07-06 08:37:01,599 - DEBUG - There are 1 pending tasks possibly being run by other workers
+2025-07-06 08:37:01,599 - DEBUG - There are 1 pending tasks unique to this worker
+2025-07-06 08:37:01,599 - DEBUG - There are 1 pending tasks last scheduled by this worker
+2025-07-06 08:37:01,600 - INFO - Worker Worker(salt=4687641658, workers=1, host=LAPTOP-HILMAN, username=Hilman Alfajri, pid=9920) was stopped. Shutting down Keep-Alive thread
+2025-07-06 08:37:01,602 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 1 tasks of which:
+* 1 failed:
+    - 1 Extract()
+
+This progress looks :( because there were failed tasks
+
+===== Luigi Execution Summary =====
+
+2025-07-06 08:45:49,779 - INFO - Extract All Tables From Sources - FAILED
+2025-07-06 08:45:49,785 - ERROR - [pid 4692] Worker Worker(salt=5276617233, workers=1, host=LAPTOP-HILMAN, username=Hilman Alfajri, pid=4692) failed    Extract()
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 17, in read_sql_file
+    with open(file_path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'c:\\Users\\Hilman Alfajri\\Documents\\Pacmann\\Data Storage\\Exercise 3\\pactravel-extract_load_fresh-start\\src_query\\extract/all-tables.sql'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 82, in run
+    extract_query = read_sql_file(
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 22, in read_sql_file
+    raise Exception(f"Error reading SQL file: {e}")
+Exception: Error reading SQL file: [Errno 2] No such file or directory: 'c:\\Users\\Hilman Alfajri\\Documents\\Pacmann\\Data Storage\\Exercise 3\\pactravel-extract_load_fresh-start\\src_query\\extract/all-tables.sql'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\luigi\worker.py", line 210, in run
+    new_deps = self._run_get_new_deps()
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\luigi\worker.py", line 138, in _run_get_new_deps
+    task_gen = self.task.run()
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 140, in run
+    raise Exception(f"FAILED to execute EXTRACT TASK !!!")
+Exception: FAILED to execute EXTRACT TASK !!!
+2025-07-06 08:45:49,790 - DEBUG - 1 running tasks, waiting for next task to finish
+2025-07-06 08:45:49,794 - INFO - Informed scheduler that task   Extract__99914b932b   has status   FAILED
+2025-07-06 08:45:49,794 - DEBUG - Asking scheduler for work...
+2025-07-06 08:45:49,794 - DEBUG - Done
+2025-07-06 08:45:49,794 - DEBUG - There are no more tasks to run at this time
+2025-07-06 08:45:49,796 - DEBUG - There are 1 pending tasks possibly being run by other workers
+2025-07-06 08:45:49,796 - DEBUG - There are 1 pending tasks unique to this worker
+2025-07-06 08:45:49,797 - DEBUG - There are 1 pending tasks last scheduled by this worker
+2025-07-06 08:45:49,797 - INFO - Worker Worker(salt=5276617233, workers=1, host=LAPTOP-HILMAN, username=Hilman Alfajri, pid=4692) was stopped. Shutting down Keep-Alive thread
+2025-07-06 08:45:49,799 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 1 tasks of which:
+* 1 failed:
+    - 1 Extract()
+
+This progress looks :( because there were failed tasks
+
+===== Luigi Execution Summary =====
+
+2025-07-06 08:46:59,420 - INFO - Extract All Tables From Sources - FAILED
+2025-07-06 08:46:59,427 - ERROR - [pid 30072] Worker Worker(salt=7695373095, workers=1, host=LAPTOP-HILMAN, username=Hilman Alfajri, pid=30072) failed    Extract()
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 17, in read_sql_file
+    with open(file_path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'c:/Users/Hilman Alfajri/Documents/Pacmann/Data Storage/Exercise 3/pactravel-extract_load_fresh-start/src_query/extract/all-tables.sql'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 82, in run
+    extract_query = read_sql_file(
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 22, in read_sql_file
+    raise Exception(f"Error reading SQL file: {e}")
+Exception: Error reading SQL file: [Errno 2] No such file or directory: 'c:/Users/Hilman Alfajri/Documents/Pacmann/Data Storage/Exercise 3/pactravel-extract_load_fresh-start/src_query/extract/all-tables.sql'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\luigi\worker.py", line 210, in run
+    new_deps = self._run_get_new_deps()
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\luigi\worker.py", line 138, in _run_get_new_deps
+    task_gen = self.task.run()
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 140, in run
+    raise Exception(f"FAILED to execute EXTRACT TASK !!!")
+Exception: FAILED to execute EXTRACT TASK !!!
+2025-07-06 08:46:59,431 - DEBUG - 1 running tasks, waiting for next task to finish
+2025-07-06 08:46:59,436 - INFO - Informed scheduler that task   Extract__99914b932b   has status   FAILED
+2025-07-06 08:46:59,437 - DEBUG - Asking scheduler for work...
+2025-07-06 08:46:59,437 - DEBUG - Done
+2025-07-06 08:46:59,437 - DEBUG - There are no more tasks to run at this time
+2025-07-06 08:46:59,438 - DEBUG - There are 1 pending tasks possibly being run by other workers
+2025-07-06 08:46:59,438 - DEBUG - There are 1 pending tasks unique to this worker
+2025-07-06 08:46:59,438 - DEBUG - There are 1 pending tasks last scheduled by this worker
+2025-07-06 08:46:59,439 - INFO - Worker Worker(salt=7695373095, workers=1, host=LAPTOP-HILMAN, username=Hilman Alfajri, pid=30072) was stopped. Shutting down Keep-Alive thread
+2025-07-06 08:46:59,441 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 1 tasks of which:
+* 1 failed:
+    - 1 Extract()
+
+This progress looks :( because there were failed tasks
+
+===== Luigi Execution Summary =====
+
+2025-07-06 08:57:07,574 - INFO - ==================================STARTING EXTRACT DATA=======================================
+2025-07-06 08:57:07,761 - ERROR - EXTRACT 'pactravel.flight_bookings' - FAILED.
+2025-07-06 08:57:07,761 - INFO - Extract All Tables From Sources - FAILED
+2025-07-06 08:57:07,767 - ERROR - [pid 30052] Worker Worker(salt=4528491901, workers=1, host=LAPTOP-HILMAN, username=Hilman Alfajri, pid=30052) failed    Extract()
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: relation "pactravel.flight_bookings" does not exist
+LINE 1: SELECT * FROM pactravel.flight_bookings;
+                      ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 92, in run
+    df = pd.read_sql_query(extract_query.format(table_name = table_name), src_engine)
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\io\sql.py", line 469, in read_sql_query
+    return pandas_sql.read_query(
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\io\sql.py", line 1738, in read_query
+    result = self.execute(sql, params)
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\io\sql.py", line 1562, in execute
+    return self.con.exec_driver_sql(sql, *args)
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1779, in exec_driver_sql
+    ret = self._execute_context(
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) relation "pactravel.flight_bookings" does not exist
+LINE 1: SELECT * FROM pactravel.flight_bookings;
+                      ^
+
+[SQL: SELECT * FROM pactravel.flight_bookings;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 101, in run
+    raise Exception(f"Failed to extract '{table_name}' tables")
+Exception: Failed to extract 'pactravel.flight_bookings' tables
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\luigi\worker.py", line 210, in run
+    new_deps = self._run_get_new_deps()
+  File "C:\Users\Hilman Alfajri\AppData\Local\Programs\Python\Python39\lib\site-packages\luigi\worker.py", line 138, in _run_get_new_deps
+    task_gen = self.task.run()
+  File "C:\Users\Hilman Alfajri\Documents\Pacmann\Data Storage\Exercise 3\pactravel-extract_load_fresh-start\pipeline\extract.py", line 140, in run
+    raise Exception(f"FAILED to execute EXTRACT TASK !!!")
+Exception: FAILED to execute EXTRACT TASK !!!
+2025-07-06 08:57:07,841 - DEBUG - 1 running tasks, waiting for next task to finish
+2025-07-06 08:57:07,846 - INFO - Informed scheduler that task   Extract__99914b932b   has status   FAILED
+2025-07-06 08:57:07,846 - DEBUG - Asking scheduler for work...
+2025-07-06 08:57:07,847 - DEBUG - Done
+2025-07-06 08:57:07,847 - DEBUG - There are no more tasks to run at this time
+2025-07-06 08:57:07,847 - DEBUG - There are 1 pending tasks possibly being run by other workers
+2025-07-06 08:57:07,848 - DEBUG - There are 1 pending tasks unique to this worker
+2025-07-06 08:57:07,848 - DEBUG - There are 1 pending tasks last scheduled by this worker
+2025-07-06 08:57:07,849 - INFO - Worker Worker(salt=4528491901, workers=1, host=LAPTOP-HILMAN, username=Hilman Alfajri, pid=30052) was stopped. Shutting down Keep-Alive thread
+2025-07-06 08:57:07,850 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 1 tasks of which:
+* 1 failed:
+    - 1 Extract()
+
+This progress looks :( because there were failed tasks
+
+===== Luigi Execution Summary =====
+
